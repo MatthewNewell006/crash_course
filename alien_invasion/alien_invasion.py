@@ -19,14 +19,15 @@ def run_game():
     # Make a group to store bullets in
     bullets = Group()
 
-    # Set the background color
-    bg_color = (230,230,230)
+    # # Set the background color
+    # bg_color = (230,230,230)
 
     # Start the main loop for the game
     while True:
         
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
+        bullets.update()
         gf.update_bullets(bullets)
         gf.update_screen(ai_settings, screen, ship, bullets)
 
